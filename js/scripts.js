@@ -18,5 +18,5 @@ function createEmail(formElement){
  const body='Name: '+data.get('name')+'\nEmail: '+data.get('email')+'\n\n'+data.get('message');
  return 'mailto:erroyalpartners@gmail.com?subject='+encodeURIComponent(data.get('subject'))+'&body='+encodeURIComponent(body);
 }
-form.addEventListener('submit',event=>{event.preventDefault();window.location.href=createEmail(form);document.getElementById('form-status').textContent='Your email draft is ready. Send it from your email app, or email erroyalpartners@gmail.com directly.';});
+form.addEventListener('submit',event=>{event.preventDefault();window.location.href=createEmail(form);document.getElementById('form-status').textContent='Please send your message from the email window that opens.';});
 document.getElementById('year').textContent=new Date().getFullYear();
